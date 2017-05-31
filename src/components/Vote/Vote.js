@@ -27,7 +27,7 @@ class Vote extends Component {
     request.send(JSON.stringify(this.state.formData));
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     fetch("http://localhost:5000/api/vote").then(response => response.json())
       .then((json) => {
         this.setState({
