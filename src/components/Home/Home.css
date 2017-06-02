@@ -1,0 +1,35 @@
+section.j-header {
+  margin-top: 25px;
+  line-height: 2em;
+}
+
+p.description {
+  margin-bottom: 30px;
+}
+
+a.join-btn {
+  position: relative;
+  left: 50%;
+  padding: 15px;
+  text-decoration: none;
+  border: 1px solid #3c3c3c;
+  box-shadow: 3px 3px 3px #1a1a1a;
+  background-color: #000;
+  color: #fff;
+}
+
+section.q-boxes {
+  margin-top: 50px;
+  line-height: 2em;
+}
+
+a.view-btn {
+  position: relative;
+  left: 50%;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 3px 3px 3px #9D165D;
+  border: 1px solid #D11E7C;
+  background-color: #D11E7C;
+}

@@ -11,6 +11,6 @@ ul.navbar-nav li a{
   color: #fff;
 }
 
-nav.navbar-nav li a:hover {
+ul.navbar-nav li a:hover {
   background-color: #005B7D;
 }
