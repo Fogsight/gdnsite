@@ -33,3 +33,12 @@ a.view-btn {
   border: 1px solid #D11E7C;
   background-color: #D11E7C;
 }
+
+div.push-down {
+  margin-bottom: 60px;
+}
+
+img.center-img {
+  display: block;
+  margin: 0 auto;
+}

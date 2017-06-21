@@ -14,3 +14,7 @@ ul.navbar-nav li a{
 ul.navbar-nav li a:hover {
   background-color: #005B7D;
 }
+
+ul.navbar-nav li a:focus {
+  background-color: #005B7D;
+}
