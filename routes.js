@@ -27,6 +27,8 @@ routes.get("/votes/:id", vote.applyVote);
 routes.get("/admin", admin.index);
 routes.get("/admin/votes", admin.votes);
 routes.get("/votes/remove/:id", admin.removeTheme);
+routes.get("/admin/gamejam", admin.gamejam);
+routes.post("/admin/gamejam/edit", admin.editJam)
 
 // for passport
 routes.get("/login", account.login);

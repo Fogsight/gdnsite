@@ -7,6 +7,7 @@ module.exports = {
 			active: false,
 			registering: false,
 			voting: false,
+			submissions: false,
 			theme: data.theme,
 			startDate: data.startDate,
 			endDate: data.endDate,
@@ -36,16 +37,16 @@ module.exports = {
 		jam.data = data;
 		return jam;
 	},
-	changeEnd: (jam, end) => {
-		jam.endDate = end;
-		return jam;
-	},
 	toggleRegistering: (jam) => {
 		jam.registering = !jam.registering;
 		return jam;
 	},
 	toggleVoting: (jam) => {
 		jam.voting = !jam.voting;
+		return jam;
+	},
+	toggleSubmissions: (jam) => {
+		jam.submissions = !jam.submissions;
 		return jam;
 	}
 };

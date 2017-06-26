@@ -1,0 +1,56 @@
+<div class="container">
+
+	<div class="starter-template">
+		<div class="text-center">
+		<h1>{{get_name}}</h1>
+		<p class="lead">Admin vote view!</p>
+		<p class="text-muted">*This is where you can see cool stuff about votes!</p>
+		<br>
+		<hr>
+		<div class="row">
+			<div class="col-xs-2">
+				<h4><strong>Is active jam?</strong></h4>
+			</div>
+			<div class="col-xs-4">
+				<h4><strong>Gamejam</a></h4>
+			</div>
+			<div class="col-xs-2">
+				<h4><strong>Voting Active?</strong></h4>
+			</div>
+			<div class="col-xs-2">
+				<h4><strong>Submission Active?</a></h4>
+			</div>
+            <div class="col-xs-2">
+				<h4><strong>Save Changes</a></h4>
+			</div>
+		</div>
+		<hr>
+		{{#each jam}}
+            <form action="/admin/gamejam/edit" method="post">
+            <input type="hidden" name="id" value="{{this._id}}" />
+				<div class="row">
+					<div class="col-xs-2">
+                        <input type="checkbox" id="active:{{this._id}}" checked="{{this.value.active}}" value="active"/>
+						<strong><label for="{{this._id}}">Is Active?</label></strong>
+					</div>
+					<div class="col-xs-4">
+						<h4><strong class="text-info">{{this.value.voting}}</strong></h4>
+					</div>
+					<div class="col-xs-2">
+						<input type="checkbox" id="vote:{{this._id}}" checked="{{this.value.voting}}" value="voting"/>
+						<strong><label for="{{this._id}}">Taking Votes?</label></strong>
+					</div>
+					<div class="col-xs-2">
+						<input type="checkbox" id="sub:{{this._id}}" checked="{{this.value.submissions}}" value="submissions"/>
+						<strong><label for="{{this._id}}">Taking Subs?</label></strong>
+					</div>
+                    <div class="col-xs-2">
+                        <input type="submit" value="Save">
+                    </div>
+				</div><hr>
+            </form>
+		{{/each}}
+	</div>
+	</div>
+
+</div><!-- /.container -->

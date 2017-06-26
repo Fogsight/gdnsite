@@ -76,5 +76,5 @@ module.exports.themes = function* themes() {
 	const theme = themeModel.newTheme(params.theme_name);
 	const result = yield db.saveDocument(theme, "themes");
 	this.body = result;
-	return this.redirect("/success");
+	return this.redirect("/vote");
 };

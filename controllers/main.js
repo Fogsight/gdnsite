@@ -51,7 +51,7 @@ module.exports.jam = function jam() {
 	if (this.isAuthenticated()) {
 		user = common.getPermissions(this.session.passport.user);
 	}
-	this.redirect("https://itch.io/jam/game-dev-network-blueberry-jam");
+	this.redirect("https://itch.io/jam/game-dev-network-cherry-jam");
 };
 
 // Not really implemented yet

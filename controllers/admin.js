@@ -73,3 +73,45 @@ module.exports.removeTheme = function* removeTheme() {
 		throw new Error("Forbidden - You do not have sufficient priveldges!");
 	}
 };
+
+/**
+* GET '/admin/gamejam'
+* @returns {view} admin/gamejam.hbs - Returns user to the admin gamejam
+*/
+module.exports.gamejam = function* gamejam() {
+	let user = null;
+	if (this.isUnauthenticated()) {
+		this.redirect("/login");
+	}
+	if (this.isAuthenticated()) {
+		user = common.getPermissions(this.session.passport.user);
+	}
+	if (user.admin) {
+		yield this.render("admin/gamejam", {
+			user: user
+		});
+	} else {
+		throw new Error("Forbidden - You do not have sufficient priveldges!");
+	}
+};
+
+module.exports.editJam = function* editJam() {
+	let user = null;
+	if (this.isUnauthenticated()) {
+		this.redirect("/login");
+	}
+	if (this.isAuthenticated()) {
+		user = common.getPermissions(this.session.passport.user);
+	}
+	if (user.admin) {
+		if (this.params.id === null) {
+			throw new Error("Missing parameters!");
+		}
+		
+		
+
+		this.redirect("/admin/gamejam");
+	} else {
+		throw new Error("Forbidden - You do not have sufficient priveldges!");
+	}
+}
