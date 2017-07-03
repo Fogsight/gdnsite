@@ -2,7 +2,7 @@
 
 ## Prerequisites
 * [Node.js](https://nodejs.org/en/) (Version 5 and up recommended)
-* [CouchDB](https://apache.couchdb.com)
+* [CouchDB](http://couchdb.apache.org/)
 
 ### Installation
 
